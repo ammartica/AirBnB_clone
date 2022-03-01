@@ -4,6 +4,7 @@
 from uuid import uuid4()
 from datetime import datetime
 
+
 class BaseModel:
     """Base class from which other classes will derive from"""
 
@@ -19,11 +20,11 @@ class BaseModel:
                                          self.__dict__)
 
     def save(self):
-        """updates the public instance attribute updated_at with the current datetime"""
+        """updates instance attribute updated_at with current datetime"""
         return self.updated_at = datetime.now()
 
     def to_dict(self):
-        """returns a dictionary containing all keys/values of __dict__ of the instance"""
+        """returns a dict containing values of self.__dict__"""
         self_attr = self.__dict__.copy()
         self_attr["__class__"] = self.__class__.__name__
 
