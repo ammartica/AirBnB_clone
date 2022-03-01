@@ -24,10 +24,10 @@ class BaseModel:
     def to_dict(self):
         """returns a dictionary containing all keys/values of __dict__ of the instance"""
         self_attr = self.__dict__.copy()
-        #self_attr = ["__class__"] = self.__class__.__name__
+        self_attr["__class__"] = self.__class__.__name__
 
         iso_created_at = self.created_at.datetime.isoformat("T", "auto")
         iso_updated_at = self.updated_at.datetime.isoformat("T", "auto")
 
-            self_attr["created_at"] = iso_created_at
-            self_attr["updated_at"] = iso_updated_at
+        self_attr["created_at"] = iso_created_at
+        self_attr["updated_at"] = iso_updated_at
