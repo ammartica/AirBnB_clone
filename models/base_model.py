@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Defines class named BaseModel"""
 
-from uuid import uuid4()
+from uuid import uuid4
 from datetime import datetime
 
 
@@ -12,7 +12,7 @@ class BaseModel:
         """Initializes BaseModel"""
         self.id = str(uuid4())
         self.created_at = datetime.now()
-        self.updated_at = datetime.now()
+        self.updated_at = self.created_at
 
     def __str__(self):
         """print [<class name>] (<self.id>) <self.__dict__>"""
@@ -20,16 +20,16 @@ class BaseModel:
                                          self.__dict__)
 
     def save(self):
-        """updates instance attribute updated_at with current datetime"""
-        return self.updated_at = datetime.now()
+        """update instance attribute updated_at with current datetime"""
+        self.updated_at = datetime.now()
 
     def to_dict(self):
         """returns a dict containing values of self.__dict__"""
         self_attr = self.__dict__.copy()
         self_attr["__class__"] = self.__class__.__name__
 
-        iso_created_at = self.created_at.datetime.isoformat("T", "auto")
-        iso_updated_at = self.updated_at.datetime.isoformat("T", "auto")
+        iso_created_at = self.created_at.isoformat("T", "auto")
+        iso_updated_at = self.updated_at.isoformat("T", "auto")
 
         self_attr["created_at"] = iso_created_at
         self_attr["updated_at"] = iso_updated_at
