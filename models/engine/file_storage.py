@@ -22,11 +22,21 @@ class FileStorage:
         self.__objects[key] = obj
 
     def save(self):
-        """serializes __objects to the JSON file (path: __file_path)"""
+        """serializes __objects to the JSON file in a nested dict"""
+        nested_objs = {}
+        for key, value in self.__objects.items():
+            nested_objs[key] = value.to_dict()
         with open(self.__file_path, 'w', encoding='utf-8') as f:
-            json.dump(self.__objects, f)
+            json.dump(nested_objs, f)
 
+#this function is likely wrong because I am very confused
+#about deserializing a nested dictionary into a regular dict
     def reload(self):
         """deserializes the JSON file to __objects"""
-        with open(self.__file_path, 'r', encoding='utf-8') as f:
-            json.load(f)
+        try:
+            with open(self.__file_path, 'r', encoding='utf-8') as f:
+                d_objects = json.load(f)
+            for key, value in d_objects.items():
+                self.__objects[key] = value
+        except:
+            pass
