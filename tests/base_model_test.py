@@ -4,12 +4,17 @@
 
 import unittest
 from models.base_model import BaseModel
+import re
 
 class Test_Base_Model(unittest.TestCase):
     """ Test Cases for Base_Model class"""
 
     def setup(self):
         self.my_model = BaseModel()
+
+    def test_default_values(self):
+        self.assertEqual(self.my_model.id, 
+                        "[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}")
 
     def test_attributes_set(self):
         self.my_model.name = "My First Model"
