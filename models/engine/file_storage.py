@@ -6,11 +6,8 @@ import json
 
 class FileStorage:
     """Class serializes/deserializes instances to JSON file and back"""
-
-    def __init__(self):
-        """Initializes FileStorage with private instances"""
-        __file_path = "file.json"
-        __objects = {}
+    __file_path = "file.json"
+    __objects = {}
 
     def all(self):
         """returns the dictionary __objects"""
@@ -24,19 +21,23 @@ class FileStorage:
     def save(self):
         """serializes __objects to the JSON file in a nested dict"""
         nested_objs = {}
-        for key, value in self.__objects.items():
-            nested_objs[key] = value.to_dict()
+        for item in self.__objects:
+            nested_objs[item] = {}
+            for key, value in self.__objects[item].to_dict().items():
+                nested_objs[item][key] = value
         with open(self.__file_path, 'w', encoding='utf-8') as f:
             json.dump(nested_objs, f)
 
-#this function is likely wrong because I am very confused
-#about deserializing a nested dictionary into a regular dict
+    # This function will need to be made dynamic later as currently
+    # it requires explicit object creation
     def reload(self):
         """deserializes the JSON file to __objects"""
+        from models.base_model import BaseModel
         try:
             with open(self.__file_path, 'r', encoding='utf-8') as f:
                 d_objects = json.load(f)
-            for key, value in d_objects.items():
-                self.__objects[key] = value
-        except:
+                for key in d_objects:
+                    new_obj = BaseModel(d_objects[key])
+                    self.new(new_obj)
+        except FileNotFoundError:
             pass
