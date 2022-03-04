@@ -35,7 +35,7 @@ class FileStorage:
             with open(self.__file_path, 'r', encoding='utf-8') as f:
                 d_objects = json.load(f)
                 for key in d_objects:
-                    class_name = 
+                    class_name = getattr(models, d_objects[key]['__class__'])
                     new_obj = class_name(d_objects)
                     self.new(new_obj)
         except FileNotFoundError:
