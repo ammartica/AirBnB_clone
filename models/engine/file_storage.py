@@ -31,12 +31,13 @@ class FileStorage:
 #about deserializing a nested dict into a regular dict
     def reload(self):
         """deserializes the JSON file to __objects"""
+        from models.base_model import BaseModel
         try:
             with open(self.__file_path, 'r', encoding='utf-8') as f:
                 d_objects = json.load(f)
                 for key in d_objects:
-                    class_name = getattr(models, d_objects[key]['__class__'])
-                    new_obj = class_name(d_objects)
+                    class_name = getattr(d_objects[key][], d_objects[key]['__class__'])
+                    new_obj = class_name(d_objects[key])
                     self.new(new_obj)
         except FileNotFoundError:
             pass
