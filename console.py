@@ -12,7 +12,9 @@ class HBNBCommand(cmd.Cmd):
     """ Overrides methods to personalize command interpreter """
 
     prompt = "(hbnb) "
-    classes = {"BaseModel": BaseModel}
+    classes = {"BaseModel": BaseModel, "Amenity": Amenity, "City": City,
+               "Place": Place, "Review": Review, "State": State,
+               "User": User}
 
     """--- HBNB Commands ---"""
 
@@ -92,7 +94,6 @@ class HBNBCommand(cmd.Cmd):
             else:
                 models.storage.all().pop(obj_key)
                 models.storage.save()
-
 
     # ---Basic Commands---
 
