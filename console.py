@@ -50,6 +50,28 @@ class HBNBCommand(cmd.Cmd):
             elif len(args) == 1:
                 print(HBNBCommand.instance_id_missing_err)
 
+    def do_all(self, arg):
+        """ prints string representation of all objects
+        from a certain class (or all objects if no class
+        is specified"""
+        args = arg.split()
+        all_objs = models.storage.all()
+        obj_list = []
+        if len(args) == 0:
+            obj_list = [all_objs[key].__str__() for key in all_objs]
+            print(obj_list)
+        else:
+            if args[0] not in HBNBCommand.classes:
+                print(HBNBCommand.class_ntexist_err)
+            else:
+                # Iterate through all_objs and add to obj_list
+                # the instances that have the class given in its
+                # string representation (__class__)
+                for key in all_objs:
+                    if args[0] in all_objs[key].__str__():
+                        obj_list.append(all_objs[key].__str__())
+                print(obj_list)
+
     # ---Basic Commands---
 
     def do_quit(self, arg):
