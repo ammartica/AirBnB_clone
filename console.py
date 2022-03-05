@@ -3,6 +3,7 @@
 
 
 import cmd
+import re
 import models
 from models.base_model import BaseModel
 
@@ -71,6 +72,27 @@ class HBNBCommand(cmd.Cmd):
                     if args[0] in all_objs[key].__str__():
                         obj_list.append(all_objs[key].__str__())
                 print(obj_list)
+
+    def do_destroy(self, arg):
+        """Deletes an instance based on class name and id"""
+        args = arg.split()
+        if len(args) == 0:
+            print(HBNBCommand.class_missing_err)
+        elif len(args) == 1:
+            if args[0] not in HBNBCommand.classes:
+                print(HBNBCommand.class_ntexist_err)
+            else:
+                print(HBNBCommand.instance_id_missing_err)
+        elif len(args) == 2:
+            obj_key = HBNBCommand.form_key(args[0], args[1])
+            if args[0] not in HBNBCommand.classes:
+                print(HBNBCommand.class_ntexist_err)
+            elif obj_key not in models.storage.all():
+                print(HBNBCommand.no_instance_found_err)
+            else:
+                models.storage.all().pop(obj_key)
+                models.storage.save()
+
 
     # ---Basic Commands---
 
