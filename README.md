@@ -49,7 +49,7 @@ datetime.datetime(2022, 3, 6, 0, 44, 44, 58996), 'name': 'My_First_Model', 'my_n
 378b55e1-8a4d-4ea3-9b23-06bfdb24a0af
 ```
 
-  * **destroy** command:
+#### destroy command:
 ```
 (hbnb) destroy User 378b55e1-8a4d-4ea3-9b23-06bfdb24a0af
 ```
