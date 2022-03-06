@@ -3,10 +3,14 @@
 
 
 import unittest
-# from models.city_test.py import City
+from models.city_test.py import City
 
-# class Test_City(unittest.TestCase):
-#    def setup():
-    
+
+class Test_City(unittest.TestCase):
+    def setup():
+        """ sets up city tests """
+        pass
+
+
 if __name__ == '__main__':
     unittest.main()

@@ -3,10 +3,16 @@
 
 
 import unittest
-# from models.amenity_test.py import Amenity
+from models.base_model import BaseModel
+from models.amenity_test.py import Amenity
 
-# class Test_Amenity(unittest.TestCase):
-#    def setup():
-    
+
+class Test_Amenity(unittest.TestCase):
+    """ Tests Amenity construction """
+    def setup():
+        """ sets up all tests """
+        pass
+
+
 if __name__ == '__main__':
     unittest.main()

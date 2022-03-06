@@ -3,10 +3,14 @@
 
 
 import unittest
-# from models.state_test.py import State
+from models.state_test.py import State
 
-# class Test_State(unittest.TestCase):
-#    def setup():
-    
+
+class Test_State(unittest.TestCase):
+    def setup():
+        """ sets up State tests """
+        pass
+
+
 if __name__ == '__main__':
     unittest.main()

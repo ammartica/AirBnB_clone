@@ -7,13 +7,18 @@ from models.base_model import BaseModel
 import re
 from datetime import datetime, timedelta
 
+
 class Test_Base_Model(unittest.TestCase):
     """ Test Cases for Base_Model class"""
 
     regex_id = ""
     attr_dic = {"id": str, "created_at": datetime, "update_at": datetime}
+
     def setup(self):
-        Test_Base_Model.regex_id = r"BaseModel.[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"
+        """ Sets up all tests """
+        Test_Base_Model.regex_id = "BaseModel.[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-\
+                                    [0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]\
+                                    {12}"
 
     def test_default_values(self):
         """ uuid has correct format """
@@ -33,12 +38,14 @@ class Test_Base_Model(unittest.TestCase):
         """ Passing a dictionary of values sets propper attributes """
         todaydt = datetime.today()
         yesterdaydt = todaydt - timedelta(days=1)
-        
-        # turn values into 
+
+        # turn values into
+
         today = todaydt.isoformat("T", "auto")
         yesterday = yesterdaydt.isoformat("T", "auto")
-        
-        values = {"id": "THIS IS AN ID", "created_at": yesterday, "updated_at": today}
+
+        values = {"id": "THIS IS AN ID", "created_at": yesterday,
+                  "updated_at": today}
         my_model = BaseModel(**values)
 
         values["updated_at"] = todaydt

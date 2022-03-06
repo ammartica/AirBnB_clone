@@ -3,10 +3,14 @@
 
 
 import unittest
-# from models.place_test.py import Place
+from models.place_test.py import Place
 
-# class Test_Place(unittest.TestCase):
-#    def setup():
-    
+
+class Test_Place(unittest.TestCase):
+    def setup():
+        """ sets up Place tests """
+        pass
+
+
 if __name__ == '__main__':
     unittest.main()
