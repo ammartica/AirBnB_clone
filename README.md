@@ -35,7 +35,12 @@ the program again, the data will reload as it was in the previous session.
 ### all command:
 ```
 (hbnb) all
-["[BaseModel] (b15e3b32-6b22-4645-83be-aa7cdb5869e6) {'id': 'b15e3b32-6b22-4645-83be-aa7cdb5869e6', 'created_at': datetime.datetime(2022, 3, 6, 0, 44, 18, 116779), 'updated_at': datetime.datetime(2022, 3, 6, 0, 44, 18, 116786), 'name': 'My_First_Model', 'my_number': 89}", "[BaseModel] (eff2456c-1afc-4627-83d0-e97b97adb066) {'id': 'eff2456c-1afc-4627-83d0-e97b97adb066', 'created_at': datetime.datetime(2022, 3, 6, 0, 44, 44, 58993), 'updated_at': datetime.datetime(2022, 3, 6, 0, 44, 44, 58996), 'name': 'My_First_Model', 'my_number': 89}"]
+["[BaseModel] (b15e3b32-6b22-4645-83be-aa7cdb5869e6) {'id': 'b15e3b32-6b22-4645-83be-aa7cdb5869e6',
+'created_at': datetime.datetime(2022, 3, 6, 0, 44, 18, 116779), 'updated_at':
+datetime.datetime(2022, 3, 6, 0, 44, 18, 116786), 'name': 'My_First_Model', 'my_number': 89}",
+"[BaseModel] (eff2456c-1afc-4627-83d0-e97b97adb066) {'id': 'eff2456c-1afc-4627-83d0-e97b97adb066',
+'created_at': datetime.datetime(2022, 3, 6, 0, 44, 44, 58993), 'updated_at': 
+datetime.datetime(2022, 3, 6, 0, 44, 44, 58996), 'name': 'My_First_Model', 'my_number': 89}"]
 
 ```
   * create command:
@@ -75,5 +80,7 @@ vagrant@ubuntu-focal:~/AirBnB_clone$
   * show command:
 ```
 (hbnb) show User 378b55e1-8a4d-4ea3-9b23-06bfdb24a0af
-[User] (378b55e1-8a4d-4ea3-9b23-06bfdb24a0af) {'id': '378b55e1-8a4d-4ea3-9b23-06bfdb24a0af', 'created_at': datetime.datetime(2022, 3, 6, 0, 49, 55, 811711), 'updated_at': datetime.datetime(2022, 3, 6, 0, 49, 55, 811711)}
+[User] (378b55e1-8a4d-4ea3-9b23-06bfdb24a0af) {'id': '378b55e1-8a4d-4ea3-9b23-06bfdb24a0af',
+'created_at': datetime.datetime(2022, 3, 6, 0, 49, 55, 811711), 'updated_at':
+datetime.datetime(2022, 3, 6, 0, 49, 55, 811711)}
 ```
