@@ -3,7 +3,7 @@
 
 
 import unittest
-from models.city_test.py import City
+from models.city import City
 
 
 class Test_City(unittest.TestCase):

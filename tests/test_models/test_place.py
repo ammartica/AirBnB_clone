@@ -3,7 +3,7 @@
 
 
 import unittest
-from models.place_test.py import Place
+from models.place import Place
 
 
 class Test_Place(unittest.TestCase):

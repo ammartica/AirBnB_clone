@@ -3,7 +3,7 @@
 
 
 import unittest
-from models.review_test.py import Review
+from models.review import Review
 
 
 class Test_Review(unittest.TestCase):

@@ -4,7 +4,7 @@
 
 import unittest
 from models.base_model import BaseModel
-from models.amenity_test.py import Amenity
+from models.amenity import Amenity
 
 
 class Test_Amenity(unittest.TestCase):
