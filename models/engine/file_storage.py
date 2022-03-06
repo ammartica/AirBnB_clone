@@ -28,8 +28,6 @@ class FileStorage:
         with open(self.__file_path, 'w', encoding='utf-8') as f:
             json.dump(nested_objs, f)
 
-    # This function will need to be made dynamic later as currently
-    # it requires explicit object creation
     def reload(self):
         """deserializes the JSON file to __objects"""
         from models.base_model import BaseModel
