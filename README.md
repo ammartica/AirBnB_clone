@@ -41,7 +41,6 @@ datetime.datetime(2022, 3, 6, 0, 44, 18, 116786), 'name': 'My_First_Model', 'my_
 "[BaseModel] (eff2456c-1afc-4627-83d0-e97b97adb066) {'id': 'eff2456c-1afc-4627-83d0-e97b97adb066',
 'created_at': datetime.datetime(2022, 3, 6, 0, 44, 44, 58993), 'updated_at': 
 datetime.datetime(2022, 3, 6, 0, 44, 44, 58996), 'name': 'My_First_Model', 'my_number': 89}"]
-
 ```
 #### create command:
 ```
