@@ -32,7 +32,7 @@ the program again, the data will reload as it was in the previous session.
 
 ## Examples
 
-### all command:
+#### all command:
 ```
 (hbnb) all
 ["[BaseModel] (b15e3b32-6b22-4645-83be-aa7cdb5869e6) {'id': 'b15e3b32-6b22-4645-83be-aa7cdb5869e6',
@@ -43,7 +43,7 @@ datetime.datetime(2022, 3, 6, 0, 44, 18, 116786), 'name': 'My_First_Model', 'my_
 datetime.datetime(2022, 3, 6, 0, 44, 44, 58996), 'name': 'My_First_Model', 'my_number': 89}"]
 
 ```
-  * create command:
+#### create command:
 ```
 (hbnb) create User
 378b55e1-8a4d-4ea3-9b23-06bfdb24a0af
@@ -53,7 +53,7 @@ datetime.datetime(2022, 3, 6, 0, 44, 44, 58996), 'name': 'My_First_Model', 'my_n
 ```
 (hbnb) destroy User 378b55e1-8a4d-4ea3-9b23-06bfdb24a0af
 ```
-### help command:
+#### help command:
 ```
 (hbnb) help
 
@@ -65,19 +65,19 @@ Undocumented commands:
 ======================
 printkey  showall
 ```
-  * help <\topic> command:
+####  help <topic> command:
 ```
 (hbnb) help all
  prints string representation of all objects
         from a certain class (or all objects if no class
         is specified
 ```
-  * quit or EOF command:
+####  quit or EOF command:
 ```
 (hbnb) quit
 vagrant@ubuntu-focal:~/AirBnB_clone$
 ```
-  * show command:
+####  show command:
 ```
 (hbnb) show User 378b55e1-8a4d-4ea3-9b23-06bfdb24a0af
 [User] (378b55e1-8a4d-4ea3-9b23-06bfdb24a0af) {'id': '378b55e1-8a4d-4ea3-9b23-06bfdb24a0af',
