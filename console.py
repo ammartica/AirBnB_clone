@@ -82,7 +82,6 @@ class HBNBCommand(cmd.Cmd):
         """Deletes an instance based on class name and id"""
         args = arg.split()
         error = HBNBCommand.find_error(args, 2)
-        print(error)
         if error is not None:
             print(error)
         else:
