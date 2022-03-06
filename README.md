@@ -31,6 +31,7 @@ the program again, the data will reload as it was in the previous session.
      | show          | prints string representation of an instance from class name and id |
      | update        | updates an instance based on class name and id                     |
 
+
 ## Examples
 
 #### all command:
@@ -48,7 +49,6 @@ datetime.datetime(2022, 3, 6, 0, 44, 44, 58996), 'name': 'My_First_Model', 'my_n
 (hbnb) create User
 378b55e1-8a4d-4ea3-9b23-06bfdb24a0af
 ```
-
 #### destroy command:
 ```
 (hbnb) destroy User 378b55e1-8a4d-4ea3-9b23-06bfdb24a0af
