@@ -11,19 +11,18 @@ Through it we will be managing (creating, updating, destroying) objects
 while also storing them to a JSON file.
 
 ## Description of the Command Interpreter
-  * How to start it:
-        Run the executable file console.py
-'''
+  * To start the console, run the executable file console.py:
+```
 ./console.py
-'''
+```
   * How to use its commands:
-    1. all - prints string representation of all objects of a certain class
-    2. create - creates a new instance of class provided as argument
-    3. destroy - deletes an instance based on class name and id
-    4. help - shows list of commands and how to use help command
-    5. help <\topic> - provides info on specific command
-    6. quit or EOF - exits the program
-    7. show - prints string representation of an instance from class name and id
+    - **all** - prints string representation of all objects of a certain class
+    - **create** - creates a new instance of class provided as argument
+    - **destroy** - deletes an instance based on class name and id
+    - **help** - shows list of commands and how to use help command
+    - **help <topic>** - provides info on specific command
+    - **quit** or **EOF** - exits the program
+    - **show** - prints string representation of an instance from class name and id
 
 ## Examples
 
