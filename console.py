@@ -153,7 +153,7 @@ class HBNBCommand(cmd.Cmd):
 
                     return HBNBCommand.class_ntexist_err
 
-                if (HBNBCommand.instance_exists(obj_key) is is False):
+                if (HBNBCommand.instance_exists(obj_key) is False):
 
                     return HBNBCommand.no_instance_found_err
                 else:
