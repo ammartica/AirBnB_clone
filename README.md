@@ -26,7 +26,7 @@ the program again, the data will reload as it was in the previous session.
      | create        | creates a new instance of class provided as argument               |
      | destroy       | deletes an instance based on class name and id                     |
      | help          | shows list of commands and how to use help command                 |
-     | help <topic>  | provides info on specific command                                  |
+     | help \<topic\>  | provides info on specific command                                  |
      | quit or EOF   | exits the program                                                  |
      | show          | prints string representation of an instance from class name and id |
 
