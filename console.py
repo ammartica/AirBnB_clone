@@ -119,6 +119,7 @@ class HBNBCommand(cmd.Cmd):
     # ---Overwritten methods---
 
     def emptyline(self):
+        """ Makes it so nothing runs when given empty line """
         pass
 
     # ---Helper methods---
