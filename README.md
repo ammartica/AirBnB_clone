@@ -21,7 +21,7 @@ the program again, the data will reload as it was in the previous session.
   * **How to use its commands:**
 
      | Command       |  Description                                                       |
-     |     :---:     | -----------------------------------------------------------------  |
+     |     :---:     |                             :---:                                  |
      | all           | prints string representation of all objects of a certain class     |
      | create        | creates a new instance of class provided as argument               |
      | destroy       | deletes an instance based on class name and id                     |
@@ -29,6 +29,7 @@ the program again, the data will reload as it was in the previous session.
      | help \<topic\>  | provides info on specific command                                  |
      | quit or EOF   | exits the program                                                  |
      | show          | prints string representation of an instance from class name and id |
+     | update        | updates an instance based on class name and id                     |
 
 ## Examples
 
@@ -82,4 +83,7 @@ vagrant@ubuntu-focal:~/AirBnB_clone$
 [User] (378b55e1-8a4d-4ea3-9b23-06bfdb24a0af) {'id': '378b55e1-8a4d-4ea3-9b23-06bfdb24a0af',
 'created_at': datetime.datetime(2022, 3, 6, 0, 49, 55, 811711), 'updated_at':
 datetime.datetime(2022, 3, 6, 0, 49, 55, 811711)}
+```
+#### update command:
+```
 ```
