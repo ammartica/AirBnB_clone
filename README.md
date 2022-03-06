@@ -86,4 +86,5 @@ datetime.datetime(2022, 3, 6, 0, 49, 55, 811711)}
 ```
 #### update command:
 ```
+(hbnb) update User 1d79e2b6-1dce-46af-8577-18268da23477 first_name Juan
 ```
