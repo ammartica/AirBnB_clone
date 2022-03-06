@@ -14,11 +14,11 @@ The Command Interpreter allows us to manage objects while also storing them to a
 This means we will be creating, updating, or even destroying objects and when we close and run
 the program again, the data will reload as it was in the previous session.
 
-  * How to start it:  run the executable file console.py
+#### How to start it:  run the executable file console.py
 ```
 ./console.py
 ```
-  * How to use its commands:
+#### How to use its commands:
 
      | Command       |  Description                                                       |
      |     :---:     | -----------------------------------------------------------------  |
