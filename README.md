@@ -20,15 +20,15 @@ the program again, the data will reload as it was in the previous session.
 ```
 #### How to use its commands:
 
-     | Command         |  Description                                                       |
-     |     :---:       | -----------------------------------------------------------------  |
-     | all             | prints string representation of all objects of a certain class     |
-     | create          | creates a new instance of class provided as argument               |
-     | destroy         | deletes an instance based on class name and id                     |
-     | help            | shows list of commands and how to use help command                 |
-     | help \<topic\>  | provides info on specific command                                  |
-     | quit or EOF     | exits the program                                                  |
-     | show            | prints string representation of an instance from class name and id |
+     | Command       |  Description                                                       |
+     |     :---:     | -----------------------------------------------------------------  |
+     | all           | prints string representation of all objects of a certain class     |
+     | create        | creates a new instance of class provided as argument               |
+     | destroy       | deletes an instance based on class name and id                     |
+     | help          | shows list of commands and how to use help command                 |
+     | help 'topic'  | provides info on specific command                                  |
+     | quit or EOF   | exits the program                                                  |
+     | show          | prints string representation of an instance from class name and id |
 
 ## Examples
 
