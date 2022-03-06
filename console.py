@@ -124,9 +124,11 @@ class HBNBCommand(cmd.Cmd):
     # ---Helper methods---
 
     def form_key(classname, uuid):
+        """ creates obj_key to find specific instances """
         return classname + "." + uuid
 
     def find_error(args, expected=0):
+        """ Primary error handling function """
         if len(args) >= 2:
             obj_key = HBNBCommand.form_key(args[0], args[1])
         if len(args) < expected:
@@ -187,12 +189,14 @@ class HBNBCommand(cmd.Cmd):
                 return None
 
     def class_exists(class_name):
+        """ Checks if class class_name exists """
         if class_name not in HBNBCommand.classes:
             return False
         else:
             return True
 
     def instance_exists(obj_key):
+        """ Checks if instance exists with obj_key given """
         if obj_key not in models.storage.all():
             return False
         else:
