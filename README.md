@@ -64,7 +64,7 @@ Undocumented commands:
 ======================
 printkey  showall
 ```
-####  help <topic> command:
+####  help \<topic\> command:
 ```
 (hbnb) help all
  prints string representation of all objects
