@@ -94,14 +94,19 @@ class HBNBCommand(cmd.Cmd):
         args = arg.split()
         error = HBNBCommand.find_error(args, 4)
         if error is None:
-            # fetches object through id, then checks attr_type
-            # if attr_type is a simple type it'll set the attr
-            # using args[4], and converts it
-            simple_types = {"int": int, "str": str, "float": float}
+            # fetches object through id, then tries to convert
+            # value to simple types
             obj_key = HBNBCommand.form_key(args[0], args[1])
-            obj = models.storage.all()[obj_key]
-            attr_type = type(getattr(obj, args[2]))
-            setattr(models.storage.all()[obj_key], args[2], attr_type(args[3]))
+            try:
+                args[3].index(".")
+                args[3] = float(args[3])
+            except ValueError:
+                try:
+                    args[3] = int(args[3])
+                except ValueError:
+                    pass
+
+            setattr(models.storage.all()[obj_key], args[2], args[3])
             models.storage.save()
         else:
             print(error)
