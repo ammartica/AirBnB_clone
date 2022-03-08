@@ -213,10 +213,10 @@ class HBNBCommand(cmd.Cmd):
     class_missing_err = "** class name missing **"
     class_ntexist_err = "** class doesn't exist **"
     class_no_id_err = "** instance id missing **"
-    no_instance_found_err = " ** no instance found **"
-    instance_id_missing_err = " ** instance id missing **"
+    no_instance_found_err = "** no instance found **"
+    instance_id_missing_err = "** instance id missing **"
     attr_name_missing_err = "** attribute name missing **"
-    value_missing_err = " ** value missing **"
+    value_missing_err = "** value missing **"
 
 
 if __name__ == '__main__':
