@@ -8,6 +8,6 @@ header
 
 .logo
   {
-    content: url("../images/logo.png") no-repeat;
+    content: url("../images/logo.png") ;
     margin-left: 20px;
   }
