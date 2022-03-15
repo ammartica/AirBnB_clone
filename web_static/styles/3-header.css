@@ -8,7 +8,7 @@ header
 
 .logo
   {
-    background: url("../images/logo.png") no-repeat;
-    margin-left: 20px;
-    height: 100%;
+    content: url("../images/logo.png") no-repeat;
+    display: flex;
+    justify-content: center;
   }
