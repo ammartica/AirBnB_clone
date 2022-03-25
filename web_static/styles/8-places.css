@@ -28,6 +28,20 @@
     justify-content: space-evenly;
   }
 
+
+.information
+{
+	width: 100%;
+	height: 80px;
+	border-top: #DDDDDD 1px solid;
+	border-bottom: #DDDDDD 1px solid;
+	margin-top: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  padding-bottom: 10px;
+}
+
 .price_by_night
   {
     color: #FF5A5F;
@@ -37,6 +51,10 @@
     font-size: 30px;
     border-radius: 50%;
     text-align: center;
+    line-height: 60px;
+	  position: absolute;
+    margin-left: 300px;
+    margin-top: -70px;
   }
 
 .max_guest
@@ -64,4 +82,16 @@
     background: url(../images/bath.png) no-repeat;
     background-position: center center;
     text-align: center;
+  }
+
+.user
+  {
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+
+.description
+  {
+    margin-left: 10px;
+    margin-right: 10px;
   }
